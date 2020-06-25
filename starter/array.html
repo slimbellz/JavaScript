@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h2>JavaScript Arrays</h2>
+
+        <h4>Creating an Array</h4>
+        <code>
+            <p>var cars = ["Saab", "Volvo", "BMW"];</p>
+            <p>document.getElementById("id").innerHTML = cars;</p>
+        </code>
+
+        <p id="arrays"></p>
+
+        <h4>Changing an element in an array</h4>
+        <code>
+            <p>var ncars = ["Saab", "Volvo", "BMW"];</p>
+            <p>ncars[0] = "Opel";</p>
+            <p>document.getElementById("id").innerHTML = ncars;</p>
+        </code>
+
+        <p id="fcars"></p>
+
+        <h4>Array Properties</h4>
+        <code>
+            <p>var fruits = ["Banana", "Orange", "Apple", "Mango", "Carrot", "Grape"];</p>
+            <p>fruits.length;   // the length of fruits is 4</p>
+        </code>
+        <p id="fruit"></p>
+
+        <h4>Accessing the First Array Element</h4>
+        <code>
+            <p>var first = fruits[0];</p>
+            <p>Banana</p>
+        </code>
+        <p id="firstFruit"></p>
+
+        <h4>Accessing the last element in the array</h4>
+        <code>
+            <p>var last = fruits[fruits.length-1];</p>
+            <p>document.getElementById("demo").innerHTML = last;</p>
+        </code>
+
+        <p id="last"></p>
+
+        <h4>Loop through an Array</h4>
+        <code>
+            <p>var fruits, text, i;</p>
+        </code>
+        <p>Using the above Array</p>
+        <code>
+            <p>text = ;</p>
+            <p>for (i = 0; i < fruits.length; i++) {</p>
+                <p>text += + fruits[i] + </p>
+                <p>}</p>
+                <p>text += </p>
+        </code>
+        <p id="loop"></p>
+
+        <script>
+            var cars = ["Saab", "Volvo", "BMW"];
+            document.getElementById("arrays").innerHTML = cars;
+
+            var ncars = ["Saab", "Volvo", "BMW"];
+            ncars[0] = "Opel";
+            document.getElementById("fcars").innerHTML = ncars;
+
+            var fruits = ["Banana", "Orange", "Apple", "Mango", "Carrot", "Grape"];
+            document.getElementById("fruit").innerHTML = fruits.length;
+            var first = fruits[0];
+            document.getElementById("firstFruit").innerHTML = first;
+            var last = fruits[fruits.length-1];
+            document.getElementById("last").innerHTML = last;
+
+            let text, i;
+            text = "<ul>"
+            for (i = 0; i < fruits.length; i++) {
+                text += "<li>" + fruits[i] + "</li>";
+            }
+            text += "</ul>";
+
+            document.getElementById("loop").innerHTML = text;
+        </script>
+    
+    </body>
+</html>

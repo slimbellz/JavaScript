@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Converting</title>
+    </head>
+    <body>
+
+        <h2>Strings to Array</h2>
+        <p>A string can be converted to an array with the <code>Split()</code> method:</p>
+        <code>function myFunction() {
+            <p>var str = "a,b,c,d,e,f,g";</p>
+            <p>var arr = str.split(",");</p>
+            <p>document.getElementById("id").innerHTML = arr[0];}</p>
+        </code>
+
+        <p id="callfun"></p>
+
+        <button onclick="myFunction()" type="button">Try it</button>
+        
+        <p>Example</p>
+        <code>
+            <p>var str = "Hello";</p>
+            <p>var arr = str.split("");</p>
+            <p>var text = "";</p>
+            <p>var i;</p>
+            <p>for (i = 0; i < arr.length; i++) {</p>
+            <p>text += arr[i] + "<"br">"</p>
+            <p>}</p>
+            <p>document.getElementById("demo").innerHTML = text;</p>
+        </code>
+
+
+        <p>Split String with ("") and convert to array</p>
+        <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var str = "a,b,c,d,e,f,g";
+            var arr = str.split(",");
+            document.getElementById("callfun").innerHTML = arr[0];
+        }
+
+        var grt = "Hello";
+        var array = grt.split("");
+        var text = "";
+        var i;
+        for (i = 0; i < array.length; i++) {
+           text += array[i] + "<br>"  
+        }
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+    </body>
+</html>
