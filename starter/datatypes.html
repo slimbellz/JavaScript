@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>JS Data Types</h1>
+
+        <h4>Numbers which we are all familiar with.</h4>
+        <p id="numbers"></p>
+
+
+        <h4>Booleans, this only have two values: true or false</h4>
+        <p id="booleans"></p>
+
+
+        <h4>Strings</h4>
+        <p id="strings"></p>
+
+        <h4>Objects</h4>
+        <p id="objects"></p>
+        
+        <h4>Arrays indexes are zero-based, which means the first item is [0].</h4>
+        <p id="arrays"></p>
+
+        <script>
+            let K = 100;
+            document.getElementById("numbers").innerHTML = 
+            K;
+
+            let x = 5;
+            let y = 5;
+            let z = 6;
+            document.getElementById("booleans").innerHTML = 
+            (x == y) + "<br>" + (x == z);
+
+            let answer1 = "it's alright";
+            let answer2 = "He is called 'Johnny'";
+            let answer3 = 'He is called "Johnny"';
+            document.getElementById("strings").innerHTML = 
+            answer1 + "<br>" +
+            answer2 + "<br>" +
+            answer3;
+
+            let person = {
+                firstName : "John",
+                lastName : "Doe",
+                age : 50,
+                eyeColor : "blue"
+            };
+            document.getElementById("objects").innerHTML = 
+            person.firstName + " is " + person.age + " years old.";
+
+            var cars = ["Saab", "Volvo", "BMW"]
+            document.getElementById("arrays").innerHTML = 
+            cars[0]; 
+        </script>
+    </body>
+</html>
