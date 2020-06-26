@@ -2,6 +2,16 @@
 <html>
     <head>
         <title>Arrays</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                padding: 25px;
+                margin: 25px;
+            }
+            h2 h4 {
+                color: blue;
+            }
+        </style>
     </head>
     <body>
         <h2>JavaScript Arrays</h2>
@@ -59,6 +69,103 @@
         </code>
         <p id="loop"></p>
 
+        <h4>Adding Array Elements</h4>
+        <code>
+            <p>fruits.push("Lemon");// adds a new element (Lemon) to fruits</p>
+        </code>
+
+        <button onclick="myFunction()">Try it</button>
+        <p id="add"></p>
+
+        <h4>Converting Array to String</h4>
+        <p>The toString() method returns an array as a comma separated string</p>
+        <code>
+            <p>document.getElementById("id").innerHTML = fruits.toString();</p>
+        </code>
+
+        <p id="convert"></p>
+
+        <h4>Popping</h4>
+        <p>The pop() method removes the last element from an array:</p>
+        <code>
+            <p>fruits.pop();//removes the last element Grape.</p>
+        </code>
+        <p id="pop1"></p>
+        <p id="pop2"></p>
+
+        <h4>Pushing</h4>
+        <p>The push() method returns the new array length:</p>
+        <code>
+            <p>fruits.push("Kiwi");</p>
+        </code>
+        <p id="push1"></p>
+        <p id="push2"></p>
+
+
+        <h4>Shifting Elements</h4>
+        <p>Similar to popping the difference is it works on the first element</p>
+        <code>
+            <p>fruits.shift();</p>
+        </code>
+        <p id="shift1"></p>
+        <p id="shift2"></p>
+
+        <h4>unshifting Elements</h4>
+        <p>Similar to pushing the difference is it adds new element to the beginning of the array</p>
+        <code>
+            <p>fruits.unshift("Coconut");</p>
+        </code>
+        <p id="unshift1"></p>
+        <p id="unshift2"></p>
+
+        <h4>Splicing an Array</h4>
+        <p>The splice() method adds new elements to an array.</p>
+        <code>
+            <p>document.getElementById("demo1").innerHTML = "Original Array:<br>" + fruits;</p>
+            <p>function myFunction() {</p>
+            <p>fruits.splice(2, 0, "Lemon", "Kiwi");</p>
+            <p>document.getElementById("demo2").innerHTML = "New Array:<br>" + fruits;</p>
+            <p>}</p>
+        </code>
+
+        <button onclick="myFun()">Try it</button>
+        <p id="splice1"></p>
+        <p id="splice2"></p>
+
+
+        <p><strong>Using the second parameter in splice to display removed elements from the Array</strong></p>
+        <code>
+            <p>fruits.splice(2, 2, "Pawpaw", "Sugarcane");</p>
+        </code>
+
+        <button onclick="removedElement()">Try it</button>
+        <p id="rmv1"></p>
+        <p id="rmv2"></p>
+        <p id="rmv3"></p>
+
+        <h4>concat</h4>
+        <p>The concat() method is used to merge (concatenate) arrays:</p>
+        <code>
+            <p>let concat1 = ["Mohammed", "Kafayat"];</p>
+            <p>let concat2 = ["Tahira", "Temitope", "Olatundun"];</p>
+            <p>let concat3 = ["Olalekan", "Mopelola", "Bellos"];</p>
+            <p>let myFamily = concat1.concat(concat2, concat3);</p>
+            <p>document.getElementById("id").innerHTML = myFamily;</p>
+        </code>
+        
+        <p id="merge"></p>
+
+
+        <h4>Slicing method</h4>
+        <p>When slice() method is given two arguments, it selects array elements from <br>
+            the start argument, and up to (but not included) the end argument:</p>
+        <code>
+            <p>var citrus = fruits.slice(1,3);</p>
+                <p>document.getElementById("slice").innerHTML = fruits + "<br><br>" + citrus;</p>
+        </code>
+        <p id="slice"></p>    
+
+
         <script>
             var cars = ["Saab", "Volvo", "BMW"];
             document.getElementById("arrays").innerHTML = cars;
@@ -80,8 +187,54 @@
                 text += "<li>" + fruits[i] + "</li>";
             }
             text += "</ul>";
-
             document.getElementById("loop").innerHTML = text;
+
+            document.getElementById("add").innerHTML = fruits;
+            function myFunction() {
+                fruits.push("Lemon");
+                document.getElementById("add").innerHTML = fruits;
+            }
+
+            document.getElementById("convert").innerHTML = fruits.toString();
+        
+            document.getElementById("pop1").innerHTML = fruits;
+            fruits.pop();
+            document.getElementById("pop2").innerHTML = fruits;
+
+            document.getElementById("push1").innerHTML = fruits;
+            fruits.push("Kiwi");
+            document.getElementById("push2").innerHTML = fruits;
+
+            document.getElementById("shift1").innerHTML = fruits;
+            fruits.shift();
+            document.getElementById("shift2").innerHTML = fruits;
+
+            document.getElementById("unshift1").innerHTML = fruits;
+            fruits.unshift("Coconut");
+            document.getElementById("unshift2").innerHTML = fruits;
+        
+            document.getElementById("splice1").innerHTML = "Original Array: " + fruits;
+            function myFun() {
+                fruits.splice(2, 0, "Lime", "Cashew");
+                document.getElementById("splice2").innerHTML = "New Array: " + fruits;
+            }
+
+            document.getElementById("rmv1").innerHTML = "Original Array: " + fruits;
+            function removedElement() {
+                let removed = fruits.splice(2, 2, "Pawpaw", "Sugarcane");
+                document.getElementById("rmv2").innerHTML = "New Array: " + fruits;
+                document.getElementById("rmv3").innerHTML = "Removed Items: " + removed;
+            }
+
+            let concat1 = ["Mohammed", "Kafayat"];
+            let concat2 = ["Tahira", "Temitope", "Olatundun"];
+            let concat3 = ["Olalekan", "Mopelola", "Bellos"];
+            let myFamily = concat1.concat(concat2, concat3);
+            document.getElementById("merge").innerHTML = myFamily;
+            
+            var citrus = fruits.slice(1,3);
+            document.getElementById("slice").innerHTML = fruits + "<br><br>" + citrus;
+
         </script>
     
     </body>

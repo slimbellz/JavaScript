@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: sans-serif;
+                padding: 25px;
+                margin: 25px;
+            }
+            h2 {
+                color: blue;
+            }
+        </style>
+        <title>JS Math</title>
+    </head>
+    <body>
+
+        <h2>Math.round()</h2>
+        <p>Math.round(x) returns the value of x rounded to its nearest integer:</p>
+        <code>
+            <p>Math.round(5.9789902);</p>
+        </code>
+        <p id="round"></p>
+
+        <h2>Math.pow()</h2>
+        <p>Math.pow(x,y) returns the value of x to the power of y:</p>
+        <code>
+            <p>Math.pow(8,2);</p>
+        </code>
+        <p id="pow"></p>
+
+        <h2>Math.sqrt()</h2>
+        <p>Math.sqrt(x) returns the square root of x:</p>
+        <code>
+            <p>Math.sqrt(64);</p>
+        </code>
+        <p id="sqrt"></p>
+
+        <h2>Math.abs()</h2>
+        <p>Math.abs(x) returns the absolute (positive) value of x:</p>
+        <code>
+            <p>Math.abs(-4.4);</p>
+        </code>
+        <p id="abs"></p>
+
+        <h2>Math.min() and Math.max()</h2>
+        <p>Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments:</p>
+        <code>
+            <p>Math.min(0, 150, 30, 20, -8, -200);  // returns -200</p>
+            <p>Math.max(0, 150, 30, 20, -8, -200);  // returns 150</p>
+        </code>
+        <p id="max"></p>
+        <p id="min"></p>
+
+        <script>
+            document.getElementById("round").innerHTML = Math.round(5.9789902);
+        
+            document.getElementById("pow").innerHTML = Math.pow(8,2);
+        
+            document.getElementById("sqrt").innerHTML = Math.sqrt(64);
+
+            document.getElementById("abs").innerHTML = Math.abs(-4.4);
+
+            document.getElementById("max").innerHTML = Math.max(0, 150, 30, 20, -8, -200);
+
+            document.getElementById("min").innerHTML = Math.min(0, 150, 30, 20, -8, -200);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: sans-serif;
+                padding: 25px;
+                margin: 25px;
+            }
+            h2 h4 {
+                color: blue;
+            }
+        </style>
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h2>Arrays Continuation</h2>
+
+        <h4>Sorting</h4>
+        <p>The sort() method sorts an array alphabetically.</p>
+
+        <code>
+            <p>var fruits = ["Banana", "Orange", "Apple", "Mango", "Cashew", "Lemon", "Sugarcane"];</p>
+            <p>document.getElementById("sortit").innerHTML = fruits;</p>
+            <p>function myFunction() {</p>
+                <p>fruits.sort();// Sorts the elements of fruits</p>
+                <p>document.getElementById("sortit").innerHTML = fruits;</p>
+            <p>}</p>
+        </code>
+        
+        <button onclick="myFunction()">Click it</button>
+        <p id="sortit"></p>
+
+        <h4>Reversing an Array</h4>
+        <p>The reverse() method reverses the element in an array.</p>
+        <p>You can use it to sort array in descending order:</p>
+        <code>
+            <p>fruits.sort();//First sort the elements of the fruits</p>
+            <p>fruits.reverse();//Then reverse the order of the elements</p>
+        </code>
+
+        <button onclick="revFunction()">Click it</button>
+
+        <p id="reverseit"></p>
+
+
+
+    
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango", "Cashew", "Lemon", "Sugarcane"];
+            document.getElementById("sortit").innerHTML = fruits;
+
+            function myFunction() {
+                fruits.sort();
+                document.getElementById("sortit").innerHTML = fruits;
+            }
+
+            document.getElementById("reverseit").innerHTML = fruits;
+            function revFunction() {
+                fruits.sort();//First sort it.
+                fruits.reverse();//Then reverse it.
+                document.getElementById("reverseit").innerHTML = fruits;
+            }
+        </script>
+    </body>
+</html>

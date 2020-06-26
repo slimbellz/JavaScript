@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: sans-serif;
+                padding: 25px;
+                margin: 25px;
+            }
+            h2 {
+                color: blue;
+            }
+        </style>
+        <title></title>
+    </head>
+    <body>
+
+        <h2>Array.forEach()</h2>
+        <p>The forEach() method executes a provided function once for each array element.</p>
+        <code>
+            <p>var txt = "";</p>
+            <p>var numbers = [45, 4, 9, 16, 25];</p>
+            <p>numbers.forEach(myFunction);</p>
+            <p>document.getElementById("id").innerHTML = txt;</p>
+            <p>function myFunction(value) {</p>
+            <p>txt = txt + value + "<br>";</p> 
+            <p>}</p>
+        </code>
+        <p id="forEach1"></p>
+
+        <h2>Array.map()</h2>
+        <p>Creates a new array by performing a function on each array element.</p>
+        <code>
+            <p>var numbers1 = [45, 4, 9, 16, 25, 19, 42];</p>
+            <p>var numbers2 = numbers1.map(myFunction2);</p>
+
+            <p>document.getElementById("id").innerHTML = numbers2;</p>
+            function myFunction2() {
+                return value * 2;
+            }
+        </code>
+        
+        <p id="map"></p>
+
+        <h2>Array.filter</h2>
+        <p>Creates a new array with all array elements that passes a test.</p>
+        <code>
+            <p>var num = [45, 4, 9, 16, 25];</p>
+            <p>var over18 = numbers.filter(myFunction);</p>
+            <p>document.getElementById("demo").innerHTML = over18;</p>
+            <p>function myFunction(value) {</p>
+                  <p>return value > 18;</p>
+                <p>}</p>
+        </code>        
+        
+        <p id="filter1"></p>
+
+        <h2>Array.reduce</h2>
+        <p>This example finds the sum of all numbers in an array:</p>
+        <code>
+            <p>Using decleared numbers above</p>
+            <p>var sum = numbers.reduce(myFunction4);</p>
+            <p>document.getElementById("id").innerHTML = "The sum is " + sum;</p>
+            <p>function myFunction4(total, value) {</p>
+            <p>return total + value;</p>
+            <p>}</p>
+        </code>
+        
+        <p id="reduce1"></p>
+
+        <p>There is also reduceRight() method that runs from right to left</p>
+
+        <h2>Array.indexOf()</h2>
+        <p>The indexOf() method searches an array for an element value and returns its position.</p>
+        <code>
+            <p>var a = fruits.indexOf("element");</p>
+        </code>
+        <p id="index1"></p>
+        <p id="index2"></p>
+
+        <h2>Array.lastIndexOf()</h2>
+        <p>Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.</p>
+        <code>
+            <p>var Fli = fruits.lastIndexOf("array element");</p>
+        </code>
+        <p id="lastIndex1"></p>
+        <p id="lastIndex2"></p>
+
+        <h2>Array.find() & Array.findIndex()</h2>
+        <p>The find() method returns the value of the first array element that passes a test function.<br>
+            While The findIndex() method returns the index of the first array element that passes a test function.</p>
+
+        <script>
+            var txt = "";
+            var numbers = [45, 4, 9, 16, 25];
+            numbers.forEach(myFunction);
+            document.getElementById("forEach1").innerHTML = txt;
+
+            function myFunction(value) {
+                txt += value + "<br>";
+            }
+
+            var numbers1 = [45, 4, 9, 16, 25, 19, 42];
+            var numbers2 = numbers1.map(myFunction2);
+            document.getElementById("map").innerHTML = numbers2;
+
+            function myFunction2(value) {
+                return value * 2;
+            }
+
+            var num = [45, 4, 9, 16, 25, 19, 42, 83, 17];
+            var over18 = num.filter(myFunction3);
+            document.getElementById("filter1").innerHTML = over18;
+
+            function myFunction3(value) {
+                return value > 18;
+            }
+
+            var sum = num.reduce(myFunction4);
+
+            document.getElementById("reduce1").innerHTML = "The sum is " + sum;
+
+            function myFunction4(total, value) {
+                return total + value;
+            }
+
+            var fruits = ["Banana", "Orange", "Pawpaw", "Coconut", "Mango", "Cashew", "Grape", "Mango"];
+            document.getElementById("index1").innerHTML = fruits;
+            var a = fruits.indexOf("Mango");
+            document.getElementById("index2").innerHTML = "Mango is found in position " + a;
+
+            document.getElementById("lastIndex1").innerHTML = fruits;
+            var Fli = fruits.lastIndexOf("Mango");
+            document.getElementById("lastIndex2").innerHTML = Fli;
+        </script>
+    </body>
+</html>
